@@ -80,7 +80,8 @@ KeyPad {
             CharKey { label: "n"; shifted: "N"; extended: ["ñ"]; extendedShifted: ["Ñ"] }
             CharKey { label: "m"; shifted: "M"; }
             CharKey { label: ","; shifted: ","; extended: ["'", "\"", ";", ":", "@", "&", "(", ")"]; extendedShifted: ["'", "\"", ";", ":", "@", "&", "(", ")"]; }
-            CharKey { label: "."; shifted: "."; extended: ["?", "-", "_", "!", "+", "%","#","/"];  extendedShifted: ["?", "-", "_", "!", "+", "%","#","/"]; }
+            CharKey { label: "."; shifted: "."; extended: ["?", "-", "_", "!", "+", "%","#","/"]; extendedShifted: ["?", "-", "_", "!", "+", "%","#","/"]; }
+            CharKey { label: "-"; shifted: "-"; extended: ["_"]; extendedShifted: ["_"]; }
             BackspaceKey { padding: 0 }
         }
 
@@ -90,10 +91,11 @@ KeyPad {
 
             height: panel.keyHeight + Device.row_margin;
 
-            SymbolShiftKey { id: symShiftKey;                            anchors.left: parent.left; height: parent.height; }
-            LanguageKey    { id: languageMenuButton;                     anchors.left: symShiftKey.right; height: parent.height; }
-            SpaceKey       { id: spaceKey;                               anchors.left: languageMenuButton.right; anchors.right: enterKey.left; noMagnifier: true; height: parent.height; }
-            ReturnKey      { id: enterKey;                               anchors.right: parent.right; height: parent.height; }
+            ControlKey     { id: controlKey; label: "strg"; shifted: "ctrl"; anchors.left: parent.left; height: parent.height; }
+            SymbolShiftKey { id: symShiftKey; anchors.left: controlKey.right; height: parent.height; }
+            LanguageKey    { id: languageMenuButton; anchors.left: symShiftKey.right; height: parent.height; }
+            SpaceKey       { id: spaceKey; anchors.left: languageMenuButton.right; anchors.right: enterKey.left; noMagnifier: true; height: parent.height; }
+            ReturnKey      { id: enterKey; anchors.right: parent.right; height: parent.height; }
         }
     } // column
 }
