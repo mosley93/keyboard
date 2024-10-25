@@ -658,6 +658,14 @@ void AbstractTextEditor::onKeyReleased(const Key &key)
         event_key = Qt::Key_Tab;
         break;
 
+    case Key::ActionControl:
+        event_key = Qt::Key_Control;
+        break;
+
+    case Key::ActionCapsLock:
+        event_key = Qt::Key_CapsLock;
+        break;
+
     default:
         break;
     }

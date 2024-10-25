@@ -75,6 +75,8 @@ public:
         ActionEscape, //!< Key sends Escape
         ActionPageUp, //!< Key sends PageUp
         ActionPageDown, //!< Key sends PageDown
+        ActionControl, //!< Key sends Control
+        ActionCapsLock, //!< Key sends CapsLock
         NumActions
     };
 

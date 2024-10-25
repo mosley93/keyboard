@@ -29,3 +29,4 @@ EndKey 1.0 EndKey.qml
 PageUpKey 1.0 PageUpKey.qml
 PageDownKey 1.0 PageDownKey.qml
 CapsLockKey 1.0 CapsLockKey.qml
+ControlKey 1.0 ControlKey.qml
