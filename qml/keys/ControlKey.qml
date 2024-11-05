@@ -16,8 +16,41 @@
 
 import QtQuick 2.4
 
+import QtQuick.Controls 2.12
+import QtQuick.Window 2.12
+import MaliitKeyboard 2.0
+
 ActionKey {
+
     label: "ctrl"
     shifted: "ctrl"
-    action: "ctrl";
+    action: "ctrl"
+
+    switchBackFromSymbols: true
+    overridePressArea: true
+
+    Rectangle {
+        anchors.margins: 8
+        anchors.fill: parent
+        color: "#888888"
+        radius: 8 / Screen.devicePixelRatio
+        opacity: panel.activeKeypadState == "CONTROL" ? 0.25 : 0.0
+    }
+
+    Label {
+        anchors.centerIn: parent
+        font.weight: Font.Light
+        opacity: 0.6
+        font.pixelSize: parent.fontSize * 0.6
+        horizontalAlignment: Text.AlignHCenter
+    }
+
+    MouseArea {
+       anchors.fill: parent
+
+       onPressed: {
+           Feedback.keyPressed();
+           panel.activeKeypadState = "CONTROL";
+       }
+    }
 }

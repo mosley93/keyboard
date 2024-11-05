@@ -91,7 +91,7 @@ KeyPad {
 
             height: panel.keyHeight + Device.row_margin;
 
-            ControlKey     { id: controlKey; label: "strg"; shifted: "ctrl"; anchors.left: parent.left; height: parent.height; }
+            ControlKey     { id: controlKey; label: "strg"; shifted: "strg"; anchors.left: parent.left; height: parent.height; }
             SymbolShiftKey { id: symShiftKey; anchors.left: controlKey.right; height: parent.height; }
             LanguageKey    { id: languageMenuButton; anchors.left: symShiftKey.right; height: parent.height; }
             SpaceKey       { id: spaceKey; anchors.left: languageMenuButton.right; anchors.right: enterKey.left; noMagnifier: true; height: parent.height; }

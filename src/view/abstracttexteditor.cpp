@@ -1203,7 +1203,7 @@ void AbstractTextEditor::sendKeySequence(const QString &action, const QKeySequen
         const int key = actionSequence[i] & ~AllModifiers;
         const int modifiers = actionSequence[i] & AllModifiers;
         QString text("");
-        if (modifiers == Qt::NoModifier || modifiers == Qt::ShiftModifier) {
+        if (modifiers == Qt::NoModifier || modifiers == Qt::ShiftModifier || modifiers == Qt::ControlModifier) {
             text = QString(key);
         }
         sendKeyPressAndReleaseEvents(key, static_cast<Qt::KeyboardModifiers>(modifiers), text);
