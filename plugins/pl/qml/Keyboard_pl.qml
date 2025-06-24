@@ -85,11 +85,11 @@ KeyPad {
 
             SymbolShiftKey { id: symShiftKey;                            anchors.left: parent.left; height: parent.height; }
             LanguageKey    { id: languageMenuButton;                     anchors.left: symShiftKey.right; height: parent.height; }
-            LeftKey        { id: leftKey                                 anchors.left: languageMenuButton.right; height: parent.height; }
-            UpKey          { id: upKey                                   anchors.left: leftKey.right; height: parent.height; }
+            LeftKey        { id: leftKey;                                 anchors.left: languageMenuButton.right; height: parent.height; }
+            UpKey          { id: upKey;                                   anchors.left: leftKey.right; height: parent.height; }
             SpaceKey       { id: spaceKey;                               anchors.left: upKey.right; anchors.right: rightKey.left; noMagnifier: true; height: parent.height; }
-            RightKey       { id: rightKey                                anchors.left: spaceKey.right; height: parent.height; }
-            DownKey        { id: downKey                                 anchors.left: rightKey.right; height: parent.height; }
+            RightKey       { id: rightKey;                                anchors.left: spaceKey.right; height: parent.height; }
+            DownKey        { id: downKey;                                 anchors.left: rightKey.right; height: parent.height; }
             ReturnKey      { id: enterKey;                               anchors.right: parent.right; height: parent.height; }
         }
     } // column
