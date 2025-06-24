@@ -88,8 +88,8 @@ KeyPad {
             LeftKey        { id: leftKey;                                 anchors.left: languageMenuButton.right; height: parent.height; }
             UpKey          { id: upKey;                                   anchors.left: leftKey.right; height: parent.height; }
             SpaceKey       { id: spaceKey;                               anchors.left: upKey.right; anchors.right: rightKey.left; noMagnifier: true; height: parent.height; }
-            RightKey       { id: rightKey;                                anchors.left: spaceKey.right; height: parent.height; }
-            DownKey        { id: downKey;                                 anchors.left: rightKey.right; height: parent.height; }
+            RightKey       { id: rightKey;                                anchors.right: downKey.left; height: parent.height; }
+            DownKey        { id: downKey;                                 anchors.right: enterKey.left; height: parent.height; }
             ReturnKey      { id: enterKey;                               anchors.right: parent.right; height: parent.height; }
         }
     } // column
